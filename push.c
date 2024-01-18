@@ -7,7 +7,12 @@
 */
 void push(stack_t **stack, int value, unsigned int line_number)
 {
-	stack_t *new_node = malloc(sizeof(stack_t));
+	stack_t *new_node;
+
+	(void)line_number;
+
+	new_node = malloc(sizeof(stack_t));
+
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Error: malloc fsiled\n");
